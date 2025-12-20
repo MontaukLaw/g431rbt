@@ -88,6 +88,7 @@ void print_flash_id(void)
 void flash_test(void)
 {
     uint8_t id[4];
+
     if (xt25f_read_id(id))
     {
         if (id[1] != 0x0B || id[2] != 0x40 || id[3] != 0x17)
@@ -107,6 +108,8 @@ void flash_test(void)
         return;
     }
 
+    DBG_PRINTF("id: %02X %02X %02X %02X\r\n", id[0], id[1], id[2], id[3]);
+
     // log_flash_init();
 
     log_page_t log_page;
@@ -114,20 +117,32 @@ void flash_test(void)
     log_page.seq = 0;
     log_page.timestamp = 0x12345678;
 
-    memset(log_page.sensor_data, 0xAA, TOTAL_POINT_NUM);
-    memset(log_page.mems_data, 0x55, 24);
+    // memset(log_page.sensor_data, 0xAA, TOTAL_POINT_NUM);
+    // memset(log_page.mems_data, 0x55, 24);
 
     // 这里的含义是计算除了magic、seq、timestamp和crc字段之外的数据的CRC
     log_page.crc = crc32_soft((uint8_t *)&(log_page.sensor_data), sizeof(log_page) - 16);
     uint32_t addr = 0;
-    for (int i = 0; i < 17; i++)
+    uint8_t i, j;
+    for (i = 0; i < 17; i++)
     {
         log_page.seq = i;
         log_page.timestamp += 1;
-        log_page.sensor_data[0] = i; // 变化一点数据
+        for (j = 0; j < TOTAL_POINT_NUM; j++)
+        {
+            log_page.sensor_data[j] = j;
+        }
+
+        for (j = 0; j < MEMS_FLOAT_BYTES; j++)
+        {
+            log_page.mems_data[j] = j + 10;
+        }
+
+        // log_page.sensor_data[0] = i; // 变化一点数据
         log_page.crc = crc32_soft((uint8_t *)&(log_page.sensor_data), sizeof(log_page) - 16);
 
         addr = find_next_write_addr();
+
         DBG_PRINTF("Writing log %d to address 0x%08lX crc: 0x%08lX\r\n", i, addr, log_page.crc);
 
         xt25f_page_program(addr, (uint8_t *)&log_page, sizeof(log_page));
@@ -154,4 +169,23 @@ void flash_test(void)
         DBG_PRINTF("Log %d: Seq=%lu, Timestamp=0x%08lX, CRC=0x%08lX\r\n",
                    i, log_page.seq, log_page.timestamp, log_page.crc);
     }
+}
+
+uint16_t get_writted_number(void)
+{
+    uint32_t addr = LOG_BASE;
+    uint32_t end = LOG_BASE + XT25_F64F_PAGE_NUMBER * XT25_F64F_PAGE_SIZE;
+    uint16_t number = 0;
+    while (addr < end)
+    {
+        if (is_page_empty(addr))
+        {
+            number = addr / XT25_F64F_PAGE_SIZE;
+            printf("Writted page number: %lu\r\n", number);
+            return number;
+        }
+        addr += XT25_F64F_PAGE_SIZE;
+    }
+
+    return 0;
 }

@@ -2,7 +2,7 @@
 
 uint8_t uart1_rx_buf[STANDARD_PROTOCAL_LEN];
 uint8_t uart2_rx_buf[STANDARD_PROTOCAL_LEN];
-
+uint8_t tx_buf[20] = {0};
 static uint8_t got_rx = 0;
 uint8_t got_rx_u2 = 0;
 
@@ -67,6 +67,81 @@ void comm_handler(void)
     {
         recv_handler(got_rx);
         got_rx = 0;
+    }
+}
+
+void send_all_save_data(uint16_t data_page_nmb)
+{
+    uint16_t i;
+    uint32_t addr = 0;
+
+    log_page_t page;
+    for (i = 0; i < data_page_nmb; i++)
+    {
+        addr = LOG_BASE + i * XT25_F64F_PAGE_SIZE;
+        xt25f_read_by_addr(addr, (uint8_t *)&page, sizeof(log_page_t));
+        HAL_UART_Transmit(&huart2, (uint8_t *)&page, sizeof(log_page_t), HAL_MAX_DELAY);
+    }
+}
+
+uint16_t send_saved_data(void)
+{
+    uint16_t num = 0;
+    num = get_writted_number();
+
+    DBG_PRINTF("Writted number: %lu\r\n", num);
+    tx_buf[0] = 0x1a;
+    tx_buf[1] = num >> 8;
+    tx_buf[2] = num & 0xff;
+    tx_buf[3] = 0x0d;
+    tx_buf[4] = 0x0a;
+
+    HAL_UART_Transmit(&huart2, tx_buf, 5, HAL_MAX_DELAY);
+
+    return num;
+}
+
+void send_0b_resp_to_bl(void)
+{
+    uint16_t num = send_saved_data();
+
+    send_all_save_data(num);
+}
+
+void bl_cmd_handler(uint8_t *data, uint8_t len)
+{
+
+    if (bl_conn_status)
+    {
+        // 已连接上蓝牙模块, 透传模式, 不处理命令
+        // printf("BL RX U2 (%d): ", len);
+        // for (int i = 0; i < len; i++)
+        // {
+        //     printf("%02X ", data[i]);
+        // }
+        // printf("\r\n");
+        if (data[len - 2] == 0x0D && data[len - 1] == 0x0A)
+        {
+            DBG_PRINTF("Received 0x%02X from BL\r\n", data[0]);
+
+            // 暂时就这样.
+            switch (data[0])
+            {
+            case 0x0A:
+                break;
+
+            case 0x0B:
+                send_0b_resp_to_bl();
+                break;
+
+            case 0x0C:
+                xt25f_chip_erase();
+                break;
+
+            default:
+                break;
+            }
+        }
     }
 }
 

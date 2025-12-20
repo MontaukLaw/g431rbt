@@ -29,7 +29,7 @@ typedef struct
     uint32_t timestamp; // 可选
     uint32_t crc;       // sensor_data 和 mems_data 的 CRC32 校验值
     uint8_t sensor_data[TOTAL_POINT_NUM];
-    uint8_t mems_data[24]; // 6轴
+    uint8_t mems_data[MEMS_FLOAT_BYTES]; // 6轴
 
 } log_page_t;
 
@@ -44,5 +44,7 @@ typedef struct
 void flash_test(void);
 
 void print_flash_id(void);
+
+uint16_t get_writted_number(void);
 
 #endif

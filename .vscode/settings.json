@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "user_comm.h": "c",
+        "bat_val.h": "c"
+    }
+}

@@ -14,10 +14,12 @@
 #include "bat_val.h"
 #include "charge_state.h"
 #include "app.h"
+#include "led.h"
 
 #define COL_NUM 8
 #define ROW_NUM 14
 #define TOTAL_POINT_NUM (COL_NUM * ROW_NUM)
+#define MEMS_FLOAT_BYTES 24
 
 #include "XT25F64F.h"
 #include "flash_app.h"

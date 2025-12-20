@@ -102,10 +102,12 @@ int main(void)
 
     crc32_init();
     // xt25f_chip_erase();
+    flash_test();
 
-    // flash_test();
+    get_writted_number();
 
     start_uart_rx();
+
     /* USER CODE END 2 */
 
     /* Infinite loop */
@@ -114,7 +116,8 @@ int main(void)
     {
         // print_flash_id();
         // printf("Running...\r\n");
-        // u2_task();
+        u2_task();
+
         bl_link_status_check();
 
         /* USER CODE END WHILE */

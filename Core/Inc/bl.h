@@ -7,6 +7,7 @@ void u2_task(void);
 
 void bl_link_status_check(void);
 
+void send_all_save_data(uint16_t data_page_nmb);
 
 extern uint8_t bl_conn_status;
 

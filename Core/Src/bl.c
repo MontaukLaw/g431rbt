@@ -28,21 +28,8 @@ void bl_task(void)
     last_send_tick = HAL_GetTick();
 }
 
-void recv_handler_u2(uint8_t len)
+void conn_status_check(void)
 {
-    // 如果已经连接上了, 就是透传模式, 理论上, 从串口发送过来的数据数据量不大.
-    if (bl_conn_status)
-    {
-        printf("BL RX U2 (%d): ", len);
-        for (int i = 0; i < len; i++)
-        {
-            printf("%02X ", uart2_rx_buf[i]);
-        }
-        printf("\r\n");
-        // 暂时就这样.
-        return;
-    }
-
     if (memcmp(uart2_rx_buf, AT_FB, sizeof(AT_FB)) == 0)
     {
         // bl_conn_status = 1;
@@ -54,9 +41,15 @@ void recv_handler_u2(uint8_t len)
     }
     else if (memcmp(uart2_rx_buf, DIS_CONN_AT_FB, sizeof(DIS_CONN_AT_FB)) == 0)
     {
+
         bl_conn_status = 0;
         all_led_off();
     }
+}
+
+void recv_handler_u2(uint8_t len)
+{
+    // 如果已经连接上了, 就是透传模式, 理论上, 从串口发送过来的数据数据量不大.
 }
 
 void u2_task(void)
@@ -64,7 +57,8 @@ void u2_task(void)
 
     if (got_rx_u2)
     {
-        recv_handler_u2(got_rx_u2);
+
+        bl_cmd_handler(uart2_rx_buf, got_rx_u2);
         got_rx_u2 = 0;
     }
 }
@@ -81,12 +75,19 @@ void bl_link_status_check(void)
     // 读取bl link引脚
     if (HAL_GPIO_ReadPin(BL_LINK_GPIO_Port, BL_LINK_Pin) == GPIO_PIN_SET)
     {
+        if (bl_conn_status == 0)
+        {
+            DBG_PRINTF("BL Link connected\r\n");
+        }
         bl_conn_status = 1;
-        // DBG_PRINTF("BL Link connected\r\n");
     }
     else
     {
+        if (bl_conn_status)
+        {
+            DBG_PRINTF("BL Link disconnected\r\n");
+        }
         bl_conn_status = 0;
-        // DBG_PRINTF("BL Link disconnected\r\n");
     }
 }
+

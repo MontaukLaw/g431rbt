@@ -68,7 +68,8 @@ void xt25f_chip_erase(void)
     xt25f_wait_busy(); // ⚠ 可能几十秒
 
     uint32_t end_ts = HAL_GetTick();
-    printf("Chip erase took %lu ms\r\n", end_ts - start_ts);
+    DBG_PRINTF("Chip erase took %lu ms\r\n", end_ts - start_ts);
+
 }
 
 void xt25f_erase_sector(uint32_t addr)
@@ -173,7 +174,7 @@ bool xt25f_read_id(uint8_t *id)
     xt25f_cs_low();
 
     /* 发送 RDID 命令 */
-    if (HAL_SPI_TransmitReceive_DMA(&hspi2, &cmd, id, 4) != HAL_OK)
+    if (HAL_SPI_TransmitReceive(&hspi2, &cmd, id, 4, HAL_MAX_DELAY) != HAL_OK)
     {
         xt25f_cs_high();
         return false;
@@ -182,3 +183,5 @@ bool xt25f_read_id(uint8_t *id)
     xt25f_cs_high();
     return true;
 }
+
+// get history number

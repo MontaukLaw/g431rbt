@@ -3,57 +3,144 @@
 <pre>
 <h1>µVision Build Log</h1>
 <h2>Tool Versions:</h2>
-IDE-Version: ¦ÌVision V5.41.0.0
-Copyright (C) 2024 ARM Ltd and ARM Germany GmbH. All rights reserved.
-License Information: Marc LUO, SYCSense, LIC=LSNXV-PZRZJ-HL9CL-022LL-HRE73-2YXM8
+IDE-Version: ¦ÌVision V5.38.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: sd fdsa, dsaf, LIC=JL28G-V0I8M-BS1YX-HTFCQ-YSS48-6JYFA
  
 Tool Versions:
-Toolchain:       MDK-ARM Plus  Version: 5.41.0.0
-Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
-C Compiler:      Armcc.exe V5.06 update 4 (build 422)
-Assembler:       Armasm.exe V5.06 update 4 (build 422)
-Linker/Locator:  ArmLink.exe V5.06 update 4 (build 422)
-Library Manager: ArmAr.exe V5.06 update 4 (build 422)
-Hex Converter:   FromElf.exe V5.06 update 4 (build 422)
-CPU DLL:         SARMCM3.DLL V5.41.0.0
+Toolchain:       MDK-ARM Plus  Version: 5.38.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.19
+Assembler:       Armasm.exe V6.19
+Linker/Locator:  ArmLink.exe V6.19
+Library Manager: ArmAr.exe V6.19
+Hex Converter:   FromElf.exe V6.19
+CPU DLL:         SARMCM3.DLL V5.38.0.0
 Dialog DLL:      DCM.DLL V1.17.5.0
-Target DLL:      Segger\JL2CM3.dll V2.99.45.0
+Target DLL:      Segger\JL2CM3.dll V2.99.42.0
 Dialog DLL:      TCM.DLL V1.56.4.0
  
 <h2>Project:</h2>
-D:\LIN\G431RBT_SUITI\MDK-ARM\G431RBT_SUITI.uvprojx
+D:\LIN\g431rbt\MDK-ARM\G431RBT_SUITI.uvprojx
 Project File Date:  12/20/2025
 
 <h2>Output:</h2>
-*** Using Compiler 'V5.06 update 4 (build 422)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+*** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
 Build target 'G431RBT_SUITI'
+compiling soft_crc.c...
 compiling main.c...
+compiling app.c...
+../Core/Src/flash_app.c(27): warning: format specifies type 'unsigned long' but the argument has type 'uint32_t' (aka 'unsigned int') [-Wformat]
+            DBG_PRINTF("Next write page at 0x%08lX\r\n", addr);
+                                             ~~~~~       ^~~~
+                                             %08X
+../Core/Inc\user_comm.h(33): note: expanded from macro 'DBG_PRINTF'
+    printf("[%s:%d] " fmt, __func__, __LINE__, ##__VA_ARGS__)
+                      ~~~                        ^~~~~~~~~~~
+../Core/Src/flash_app.c(64): warning: format specifies type 'unsigned long' but the argument has type 'uint32_t' (aka 'unsigned int') [-Wformat]
+    DBG_PRINTF("Max seq: %lu at index %d\r\n", max_seq, max_index);
+                         ~~~                   ^~~~~~~
+                         %u
+../Core/Inc\user_comm.h(33): note: expanded from macro 'DBG_PRINTF'
+    printf("[%s:%d] " fmt, __func__, __LINE__, ##__VA_ARGS__)
+                      ~~~                        ^~~~~~~~~~~
+../Core/Src/flash_app.c(146): warning: format specifies type 'unsigned long' but the argument has type 'uint32_t' (aka 'unsigned int') [-Wformat]
+        DBG_PRINTF("Writing log %d to address 0x%08lX crc: 0x%08lX\r\n", i, addr, log_page.crc);
+                                                ~~~~~                       ^~~~
+                                                %08X
+../Core/Inc\user_comm.h(33): note: expanded from macro 'DBG_PRINTF'
+    printf("[%s:%d] " fmt, __func__, __LINE__, ##__VA_ARGS__)
+                      ~~~                        ^~~~~~~~~~~
+../Core/Src/flash_app.c(146): warning: format specifies type 'unsigned long' but the argument has type 'uint32_t' (aka 'unsigned int') [-Wformat]
+        DBG_PRINTF("Writing log %d to address 0x%08lX crc: 0x%08lX\r\n", i, addr, log_page.crc);
+                                                             ~~~~~                ^~~~~~~~~~~~
+                                                             %08X
+../Core/Inc\user_comm.h(33): note: expanded from macro 'DBG_PRINTF'
+    printf("[%s:%d] " fmt, __func__, __LINE__, ##__VA_ARGS__)
+                      ~~~                        ^~~~~~~~~~~
+../Core/Src/flash_app.c(170): warning: format specifies type 'unsigned long' but the argument has type 'uint32_t' (aka 'unsigned int') [-Wformat]
+                   i, log_page.seq, log_page.timestamp, log_page.crc);
+                      ^~~~~~~~~~~~
+../Core/Inc\user_comm.h(33): note: expanded from macro 'DBG_PRINTF'
+    printf("[%s:%d] " fmt, __func__, __LINE__, ##__VA_ARGS__)
+                      ~~~                        ^~~~~~~~~~~
+../Core/Src/flash_app.c(170): warning: format specifies type 'unsigned long' but the argument has type 'uint32_t' (aka 'unsigned int') [-Wformat]
+                   i, log_page.seq, log_page.timestamp, log_page.crc);
+                                    ^~~~~~~~~~~~~~~~~~
+../Core/Inc\user_comm.h(33): note: expanded from macro 'DBG_PRINTF'
+    printf("[%s:%d] " fmt, __func__, __LINE__, ##__VA_ARGS__)
+                      ~~~                        ^~~~~~~~~~~
+../Core/Src/flash_app.c(170): warning: format specifies type 'unsigned long' but the argument has type 'uint32_t' (aka 'unsigned int') [-Wformat]
+                   i, log_page.seq, log_page.timestamp, log_page.crc);
+                                                        ^~~~~~~~~~~~
+../Core/Inc\user_comm.h(33): note: expanded from macro 'DBG_PRINTF'
+    printf("[%s:%d] " fmt, __func__, __LINE__, ##__VA_ARGS__)
+                      ~~~                        ^~~~~~~~~~~
+../Core/Src/flash_app.c(184): warning: format specifies type 'unsigned long' but the argument has type 'uint16_t' (aka 'unsigned short') [-Wformat]
+            printf("Writted page number: %lu\r\n", number);
+                                         ~~~       ^~~~~~
+                                         %hu
+8 warnings generated.
+compiling flash_app.c...
+compiling stm32g4xx_it.c...
+../Core/Src/bat_val.c(54): warning: non-void function does not return a value [-Wreturn-type]
+}
+^
+1 warning generated.
+compiling bat_val.c...
+compiling bl.c...
+compiling led.c...
+compiling charge_state.c...
+../Core/Src/flash_spi_interface.c(71): warning: format specifies type 'unsigned long' but the argument has type 'unsigned int' [-Wformat]
+    DBG_PRINTF("Chip erase took %lu ms\r\n", end_ts - start_ts);
+                                ~~~          ^~~~~~~~~~~~~~~~~
+                                %u
+../Core/Inc\user_comm.h(33): note: expanded from macro 'DBG_PRINTF'
+    printf("[%s:%d] " fmt, __func__, __LINE__, ##__VA_ARGS__)
+                      ~~~                        ^~~~~~~~~~~
+../Core/Src/flash_spi_interface.c(108): warning: format specifies type 'unsigned long' but the argument has type 'uint32_t' (aka 'unsigned int') [-Wformat]
+        DBG_PRINTF("Erasing sector at address 0x%08lX\r\n", addr);
+                                                ~~~~~       ^~~~
+                                                %08X
+../Core/Inc\user_comm.h(33): note: expanded from macro 'DBG_PRINTF'
+    printf("[%s:%d] " fmt, __func__, __LINE__, ##__VA_ARGS__)
+                      ~~~                        ^~~~~~~~~~~
+2 warnings generated.
+compiling flash_spi_interface.c...
+../Core/Src/comm.c(92): warning: format specifies type 'unsigned long' but the argument has type 'uint16_t' (aka 'unsigned short') [-Wformat]
+    DBG_PRINTF("Writted number: %lu\r\n", num);
+                                ~~~       ^~~
+                                %hu
+../Core/Inc\user_comm.h(33): note: expanded from macro 'DBG_PRINTF'
+    printf("[%s:%d] " fmt, __func__, __LINE__, ##__VA_ARGS__)
+                      ~~~                        ^~~~~~~~~~~
+1 warning generated.
+compiling comm.c...
 linking...
-Program Size: Code=16864 RO-data=568 RW-data=56 ZI-data=3640  
+Program Size: Code=20076 RO-data=948 RW-data=16 ZI-data=3680  
 FromELF: creating hex file...
-"G431RBT_SUITI\G431RBT_SUITI.axf" - 0 Error(s), 0 Warning(s).
+"G431RBT_SUITI\G431RBT_SUITI.axf" - 0 Error(s), 12 Warning(s).
 
 <h2>Software Packages used:</h2>
 
 Package Vendor: ARM
-                https://www.keil.com/pack/ARM.CMSIS.6.1.0.pack
-                ARM::CMSIS@6.1.0
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
                 CMSIS (Common Microcontroller Software Interface Standard)
-   * Component: CORE Version: 6.1.0
+   * Component: CORE Version: 5.6.0
 
 Package Vendor: Keil
-                https://www.keil.com/pack/Keil.STM32G4xx_DFP.1.5.0.pack
-                Keil::STM32G4xx_DFP@1.5.0
-                STMicroelectronics STM32G4 Series Device Support, Drivers and Examples
+                https://www.keil.com/pack/Keil.STM32G4xx_DFP.2.0.0.pack
+                Keil.STM32G4xx_DFP.2.0.0
+                STMicroelectronics STM32G4 Series Device Support
 
 <h2>Collection of Component include folders:</h2>
   ./RTE/_G431RBT_SUITI
-  C:/Keil_v5/ARM/PACK/ARM/CMSIS/6.1.0/CMSIS/Core/Include
-  C:/Keil_v5/ARM/PACK/Keil/STM32G4xx_DFP/1.5.0/Drivers/CMSIS/Device/ST/STM32G4xx/Include
+  C:/Users/zunly/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
 
 <h2>Collection of Component Files used:</h2>
 
-   * Component: ARM::CMSIS:CORE@6.1.0
+   * Component: ARM::CMSIS:CORE:5.6.0
       Include file:  CMSIS/Core/Include/tz_context.h
 Build Time Elapsed:  00:00:01
 </pre>
