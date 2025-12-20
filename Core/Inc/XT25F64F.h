@@ -1,0 +1,12 @@
+#ifndef _XT25F64F_H_
+#define _XT25F64F_H_
+
+#define XT25_F64F_PAGE_NUMBER 32 * 1024  // 64Mbit = 8MByte / 256Byte
+#define XT25_F64F_PAGE_SIZE 256u
+#define XT25F_BUSY_TIMEOUT  5000000
+
+#define XT25_F64F_SECTOR_SIZE   4096u
+
+
+#endif
+
