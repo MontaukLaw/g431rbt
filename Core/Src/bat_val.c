@@ -5,7 +5,6 @@ uint8_t bat_percentage;
 uint8_t bat_smooth_percentage = 100;
 uint16_t bat_smooth_mvolts = 4200;
 
-__IO uint8_t bat_adc_done = 0;
 
 // 针对4.2伏特锂电池的点亮百分比算法.
 // 3720-3645 = 75 75/26 = 2.88

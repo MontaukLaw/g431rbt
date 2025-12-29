@@ -2,9 +2,9 @@
 
 uint8_t uart1_rx_buf[STANDARD_PROTOCAL_LEN];
 uint8_t uart2_rx_buf[STANDARD_PROTOCAL_LEN];
-uint8_t tx_buf[20] = {0};
 static uint8_t got_rx = 0;
 uint8_t got_rx_u2 = 0;
+uint8_t bl_tx_buf[STANDARD_PROTOCAL_LEN];
 
 // protocal
 // 帧头4字节 0xaa 0x55 0x03 0x99
@@ -90,13 +90,13 @@ uint16_t send_saved_data(void)
     num = get_writted_number();
 
     DBG_PRINTF("Writted number: %lu\r\n", num);
-    tx_buf[0] = 0x1a;
-    tx_buf[1] = num >> 8;
-    tx_buf[2] = num & 0xff;
-    tx_buf[3] = 0x0d;
-    tx_buf[4] = 0x0a;
-
-    HAL_UART_Transmit(&huart2, tx_buf, 5, HAL_MAX_DELAY);
+    bl_tx_buf[0] = 0x1a;
+    bl_tx_buf[1] = num >> 8;
+    bl_tx_buf[2] = num & 0xff;
+    bl_tx_buf[3] = 0x0d;
+    bl_tx_buf[4] = 0x0a;
+    
+    HAL_UART_Transmit(&huart2, bl_tx_buf, 5, HAL_MAX_DELAY);
 
     return num;
 }

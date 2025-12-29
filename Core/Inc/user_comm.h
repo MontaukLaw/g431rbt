@@ -15,6 +15,8 @@
 #include "charge_state.h"
 #include "app.h"
 #include "led.h"
+#include "switch_hal.h"
+#include "iwdg.h"
 
 #define COL_NUM 8
 #define ROW_NUM 14
@@ -25,6 +27,8 @@
 #include "flash_app.h"
 #include "flash_spi_interface.h"
 #include "soft_crc.h"
+#include "algorithm.h"
+#include "key.h"
 
 #define DEBUG_PRINT 1
 
@@ -51,7 +55,7 @@ typedef struct
 
 #define ICM42688DelayMs(_nms) HAL_Delay(_nms)
 
-#define CH_DEF(n) {CH##n##_GPIO_Port, CH##n##_Pin}
+#define CH_DEF(n) {D##n##_GPIO_Port, D##n##_Pin}
 
 #define INPUT_CH_NUMBER 16
 

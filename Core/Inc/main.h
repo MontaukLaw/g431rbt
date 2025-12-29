@@ -111,6 +111,8 @@ void Error_Handler(void);
 #define SW_4067_S0_GPIO_Port GPIOC
 #define POWER_KEY_Pin GPIO_PIN_11
 #define POWER_KEY_GPIO_Port GPIOA
+#define POWER_CTRL_Pin GPIO_PIN_12
+#define POWER_CTRL_GPIO_Port GPIOA
 #define LED_G_Pin GPIO_PIN_15
 #define LED_G_GPIO_Port GPIOA
 #define LED_R_Pin GPIO_PIN_10

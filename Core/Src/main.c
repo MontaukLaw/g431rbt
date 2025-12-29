@@ -21,6 +21,7 @@
 #include "adc.h"
 #include "dma.h"
 #include "i2c.h"
+#include "iwdg.h"
 #include "spi.h"
 #include "usart.h"
 #include "gpio.h"
@@ -98,7 +99,9 @@ int main(void)
     MX_SPI2_Init();
     MX_USART1_UART_Init();
     MX_USART2_UART_Init();
+    MX_IWDG_Init();
     /* USER CODE BEGIN 2 */
+    all_led_off();
 
     crc32_init();
     // xt25f_chip_erase();
@@ -108,17 +111,30 @@ int main(void)
 
     start_uart_rx();
 
+    HAL_ADC_Start_DMA(&hadc1, (uint32_t *)adc_dma_buffer, ADC_BUFFER_SIZE);
+    HAL_ADC_Start_DMA(&hadc2, (uint32_t *)bat_val_dma_buf, ADC2_DMA_BUF_LEN);
+
     /* USER CODE END 2 */
 
     /* Infinite loop */
     /* USER CODE BEGIN WHILE */
     while (1)
     {
-        // print_flash_id();
-        // printf("Running...\r\n");
+
+        // 喂狗
+        HAL_IWDG_Refresh(&hiwdg);
+
+        key_task();
+
+        led_task();
+
+        bat_task();
+
         u2_task();
 
         bl_link_status_check();
+
+        main_adc_task();
 
         /* USER CODE END WHILE */
 
@@ -143,9 +159,10 @@ void SystemClock_Config(void)
     /** Initializes the RCC Oscillators according to the specified parameters
      * in the RCC_OscInitTypeDef structure.
      */
-    RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
+    RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI | RCC_OSCILLATORTYPE_LSI;
     RCC_OscInitStruct.HSIState = RCC_HSI_ON;
     RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
+    RCC_OscInitStruct.LSIState = RCC_LSI_ON;
     RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
     RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
     RCC_OscInitStruct.PLL.PLLM = RCC_PLLM_DIV4;
