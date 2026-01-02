@@ -101,26 +101,68 @@ int main(void)
     MX_USART2_UART_Init();
     MX_IWDG_Init();
     /* USER CODE BEGIN 2 */
+
+    delay_init();
+
     all_led_off();
 
     crc32_init();
     // xt25f_chip_erase();
-    flash_test();
-
-    get_writted_number();
+    // flash_test();
+    // get_writted_number();
 
     start_uart_rx();
 
     HAL_ADC_Start_DMA(&hadc1, (uint32_t *)adc_dma_buffer, ADC_BUFFER_SIZE);
     HAL_ADC_Start_DMA(&hadc2, (uint32_t *)bat_val_dma_buf, ADC2_DMA_BUF_LEN);
 
+    SD_Init_SDSC();
+
+    HAL_Delay(100);
+
+    look_for_used_block_test();
+
     /* USER CODE END 2 */
 
     /* Infinite loop */
     /* USER CODE BEGIN WHILE */
+    uint32_t times = 0;
+
+    // sd write test
+    while (0)
+    {
+        
+        HAL_IWDG_Refresh(&hiwdg);
+        // delay_ms(1000);
+        // test_sd_card(times);
+        uint32_t start_time = HAL_GetTick();
+        for (times = 0; times < 100; times++)
+        {
+            HAL_IWDG_Refresh(&hiwdg);
+            if (Write_Single_Block(times, WriteBuffer) != SD_OK)
+            {
+                DBG_PRINTF("Write block %lu failed\r\n", times);
+                break;
+            }
+            // Write_Single_Block(times, WriteBuffer);
+        }
+
+        uint32_t end_time = HAL_GetTick();
+        // 100个blck需要700多ms
+        DBG_PRINTF("Written 100 blocks in %lu ms\r\n", end_time - start_time);
+
+        // DBG_PRINTF("Test SD Card\r\n");
+    }
+
+    while (1)
+    {
+        HAL_IWDG_Refresh(&hiwdg);
+    }
+
     while (1)
     {
 
+        // 记得加入按键发送消息
         // 喂狗
         HAL_IWDG_Refresh(&hiwdg);
 
@@ -135,6 +177,8 @@ int main(void)
         bl_link_status_check();
 
         main_adc_task();
+
+        imu_rest_cmd_task();
 
         /* USER CODE END WHILE */
 

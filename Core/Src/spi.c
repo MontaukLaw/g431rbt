@@ -1,21 +1,21 @@
 /* USER CODE BEGIN Header */
 /**
-  ******************************************************************************
-  * @file    spi.c
-  * @brief   This file provides code for the configuration
-  *          of the SPI instances.
-  ******************************************************************************
-  * @attention
-  *
-  * Copyright (c) 2025 STMicroelectronics.
-  * All rights reserved.
-  *
-  * This software is licensed under terms that can be found in the LICENSE file
-  * in the root directory of this software component.
-  * If no LICENSE file comes with this software, it is provided AS-IS.
-  *
-  ******************************************************************************
-  */
+ ******************************************************************************
+ * @file    spi.c
+ * @brief   This file provides code for the configuration
+ *          of the SPI instances.
+ ******************************************************************************
+ * @attention
+ *
+ * Copyright (c) 2025 STMicroelectronics.
+ * All rights reserved.
+ *
+ * This software is licensed under terms that can be found in the LICENSE file
+ * in the root directory of this software component.
+ * If no LICENSE file comes with this software, it is provided AS-IS.
+ *
+ ******************************************************************************
+ */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "spi.h"
@@ -52,7 +52,7 @@ void MX_SPI2_Init(void)
   hspi2.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
   hspi2.Init.CRCPolynomial = 7;
   hspi2.Init.CRCLength = SPI_CRC_LENGTH_DATASIZE;
-  hspi2.Init.NSSPMode = SPI_NSS_PULSE_ENABLE;
+  hspi2.Init.NSSPMode = SPI_NSS_PULSE_DISABLE; // SPI_NSS_PULSE_ENABLE;
   if (HAL_SPI_Init(&hspi2) != HAL_OK)
   {
     Error_Handler();
@@ -60,18 +60,17 @@ void MX_SPI2_Init(void)
   /* USER CODE BEGIN SPI2_Init 2 */
 
   /* USER CODE END SPI2_Init 2 */
-
 }
 
-void HAL_SPI_MspInit(SPI_HandleTypeDef* spiHandle)
+void HAL_SPI_MspInit(SPI_HandleTypeDef *spiHandle)
 {
 
   GPIO_InitTypeDef GPIO_InitStruct = {0};
-  if(spiHandle->Instance==SPI2)
+  if (spiHandle->Instance == SPI2)
   {
-  /* USER CODE BEGIN SPI2_MspInit 0 */
+    /* USER CODE BEGIN SPI2_MspInit 0 */
 
-  /* USER CODE END SPI2_MspInit 0 */
+    /* USER CODE END SPI2_MspInit 0 */
     /* SPI2 clock enable */
     __HAL_RCC_SPI2_CLK_ENABLE();
 
@@ -81,7 +80,7 @@ void HAL_SPI_MspInit(SPI_HandleTypeDef* spiHandle)
     PB14     ------> SPI2_MISO
     PB15     ------> SPI2_MOSI
     */
-    GPIO_InitStruct.Pin = FLASH_CLK_Pin|FLASH_MISO_Pin|FLASH_MOSI_Pin;
+    GPIO_InitStruct.Pin = FLASH_CLK_Pin | FLASH_MISO_Pin | FLASH_MOSI_Pin;
     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
@@ -104,7 +103,7 @@ void HAL_SPI_MspInit(SPI_HandleTypeDef* spiHandle)
       Error_Handler();
     }
 
-    __HAL_LINKDMA(spiHandle,hdmarx,hdma_spi2_rx);
+    __HAL_LINKDMA(spiHandle, hdmarx, hdma_spi2_rx);
 
     /* SPI2_TX Init */
     hdma_spi2_tx.Instance = DMA2_Channel1;
@@ -121,25 +120,25 @@ void HAL_SPI_MspInit(SPI_HandleTypeDef* spiHandle)
       Error_Handler();
     }
 
-    __HAL_LINKDMA(spiHandle,hdmatx,hdma_spi2_tx);
+    __HAL_LINKDMA(spiHandle, hdmatx, hdma_spi2_tx);
 
     /* SPI2 interrupt Init */
     HAL_NVIC_SetPriority(SPI2_IRQn, 0, 0);
     HAL_NVIC_EnableIRQ(SPI2_IRQn);
-  /* USER CODE BEGIN SPI2_MspInit 1 */
+    /* USER CODE BEGIN SPI2_MspInit 1 */
 
-  /* USER CODE END SPI2_MspInit 1 */
+    /* USER CODE END SPI2_MspInit 1 */
   }
 }
 
-void HAL_SPI_MspDeInit(SPI_HandleTypeDef* spiHandle)
+void HAL_SPI_MspDeInit(SPI_HandleTypeDef *spiHandle)
 {
 
-  if(spiHandle->Instance==SPI2)
+  if (spiHandle->Instance == SPI2)
   {
-  /* USER CODE BEGIN SPI2_MspDeInit 0 */
+    /* USER CODE BEGIN SPI2_MspDeInit 0 */
 
-  /* USER CODE END SPI2_MspDeInit 0 */
+    /* USER CODE END SPI2_MspDeInit 0 */
     /* Peripheral clock disable */
     __HAL_RCC_SPI2_CLK_DISABLE();
 
@@ -148,7 +147,7 @@ void HAL_SPI_MspDeInit(SPI_HandleTypeDef* spiHandle)
     PB14     ------> SPI2_MISO
     PB15     ------> SPI2_MOSI
     */
-    HAL_GPIO_DeInit(GPIOB, FLASH_CLK_Pin|FLASH_MISO_Pin|FLASH_MOSI_Pin);
+    HAL_GPIO_DeInit(GPIOB, FLASH_CLK_Pin | FLASH_MISO_Pin | FLASH_MOSI_Pin);
 
     /* SPI2 DMA DeInit */
     HAL_DMA_DeInit(spiHandle->hdmarx);
@@ -156,9 +155,9 @@ void HAL_SPI_MspDeInit(SPI_HandleTypeDef* spiHandle)
 
     /* SPI2 interrupt Deinit */
     HAL_NVIC_DisableIRQ(SPI2_IRQn);
-  /* USER CODE BEGIN SPI2_MspDeInit 1 */
+    /* USER CODE BEGIN SPI2_MspDeInit 1 */
 
-  /* USER CODE END SPI2_MspDeInit 1 */
+    /* USER CODE END SPI2_MspDeInit 1 */
   }
 }
 

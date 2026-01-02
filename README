@@ -1,0 +1,1 @@
+sd卡驱动在PRESCALER_4下, 超过了sd卡+BSP的稳定窗口

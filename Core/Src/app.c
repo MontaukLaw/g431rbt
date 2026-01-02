@@ -5,7 +5,15 @@ uint8_t adc_dma_buffer[ADC_BUFFER_SIZE] = {0};
 volatile uint8_t tx_buf[TX_BUF_LEN] = {0}; // 发送缓冲区
 volatile uint8_t points_data_after_proc[TOTAL_POINTS] = {0};
 volatile uint8_t points_data[FRAME_LEN] = {0};
-__IO static uint32_t fac_us = 0;
+volatile static uint32_t fac_us = 0;
+volatile uint8_t uart_busy = 0; // UART是否忙碌
+volatile uint8_t bl_uart_tx_done = 0;
+volatile uint8_t tx_data[OLD_FRAME_LEN] = {0};
+
+volatile uint8_t check_reset_imu = 0;
+volatile uint8_t need_send_reset_signal = 0;
+volatile uint8_t imu_rest_tx_data[5] = {0x03, 0xAA, 0x55, 0x03, 0x99};
+float q_out[4] = {1.0f, 0.0f, 0.0f, 0.0f}; // 初始四元数
 
 // 数据选择过程需要优化
 void adc_data_handler_with_idx(uint8_t point_nmb)
@@ -22,6 +30,70 @@ void adc_data_handler_with_idx(uint8_t point_nmb)
     points_data[point_nmb] = result; // 将结果存储到points_data中
 }
 
+void imu_rest_cmd_task(void)
+{
+    static uint8_t imu_reseted_sent = 0;
+    if (check_reset_imu)
+    {
+        if (imu_reseted && imu_reseted_sent == 0)
+        {
+
+            // HAL_UART_Transmit_DMA(&huart1, (uint8_t *)imu_rest_tx_data, 0xffff);
+            need_send_reset_signal = 1;
+            // HAL_UART_Transmit(&huart1, (uint8_t *)imu_rest_tx_data, 5, 0xffff);
+
+            imu_reseted_sent = 1;
+        }
+
+        check_reset_imu = 0;
+    }
+
+    if (bl_uart_tx_done)
+    {
+        if (imu_reseted && imu_reseted_sent)
+        {
+
+            // HAL_UART_Transmit_DMA(&huart2, (uint8_t *)imu_rest_tx_data, 5);
+            HAL_UART_Transmit(&huart2, (uint8_t *)imu_rest_tx_data, 5, 0xffff);
+
+            imu_reseted_sent = 0;
+            imu_reseted = 0;
+        }
+
+        bl_uart_tx_done = 0;
+    }
+}
+
+
+void uart_send(void)
+{
+    HAL_StatusTypeDef status = HAL_OK;
+    // // 先发送复位信号
+    if (need_send_reset_signal)
+    {
+        status = HAL_UART_Transmit(&huart1, (uint8_t *)imu_rest_tx_data, 5, 0xffff);
+        need_send_reset_signal = 0;
+    }
+
+#if USE_PRESS
+    memcpy(&tx_data[2], (const void *)points_data_after_proc, TOTAL_POINTS / 2);
+    memcpy(&tx_data[TOTAL_POINTS / 2 + 8], (const void *)&points_data_after_proc[TOTAL_POINTS / 2], TOTAL_POINTS / 2);
+#else
+    memcpy(&tx_data[2], (const void *)points_data, TOTAL_POINTS / 2);
+    memcpy(&tx_data[TOTAL_POINTS / 2 + 8], (const void *)&points_data[TOTAL_POINTS / 2], TOTAL_POINTS / 2);
+#endif
+
+    // 4元数放在最后16个字节
+    memcpy(&tx_data[TOTAL_POINTS + 8], (const void *)q_out, 16);
+
+    // 将数据复制到bl的传输数组中
+    memcpy(bl_tx_buf, (const void *)tx_data, OLD_FRAME_LEN);
+
+    status = HAL_UART_Transmit_DMA(&huart1, (uint8_t *)tx_data, OLD_FRAME_LEN);
+
+    uart_busy = 1;
+}
+
 void main_adc_task(void)
 {
 
@@ -29,6 +101,7 @@ void main_adc_task(void)
     uint16_t adc_idx = 0;
     uint16_t point_nmb = 0;
 
+    uint32_t start_ms = HAL_GetTick();
     for (input_idx = 0; input_idx < INPUT_CH_NUMBER; input_idx++)
     {
 
@@ -57,8 +130,11 @@ void main_adc_task(void)
     press256((const uint8_t *)points_data, (uint8_t *)points_data_after_proc, ADC_CHANNEL_NUMBER, INPUT_CH_NUMBER, 5, BY_COL);
 
 #endif
-    // 问答模式使用comm_handler
+
     uart_send();
+
+    uint32_t end_ms = HAL_GetTick();
+    DBG_PRINTF("ADC and UART send time: %lu ms\r\n", end_ms - start_ms);
 }
 
 uint8_t ema_u8(uint8_t new_data, uint8_t last_data, uint8_t a_num, uint8_t a_den)

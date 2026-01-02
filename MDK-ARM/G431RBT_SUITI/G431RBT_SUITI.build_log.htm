@@ -22,22 +22,19 @@ Dialog DLL:      TCM.DLL V1.56.4.0
  
 <h2>Project:</h2>
 D:\LIN\G431RBT_SUITI\MDK-ARM\G431RBT_SUITI.uvprojx
-Project File Date:  12/21/2025
+Project File Date:  12/30/2025
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 4 (build 422)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'G431RBT_SUITI'
-compiling key.c...
-..\Core\Src\key.c(51): error:  #20: identifier "POWER_CTRL_GPIO_Port" is undefined
-                  HAL_GPIO_WritePin(POWER_CTRL_GPIO_Port, POWER_CTRL_Pin, GPIO_PIN_RESET);
-..\Core\Src\key.c(51): error:  #20: identifier "POWER_CTRL_Pin" is undefined
-                  HAL_GPIO_WritePin(POWER_CTRL_GPIO_Port, POWER_CTRL_Pin, GPIO_PIN_RESET);
-..\Core\Src\key.c(63): warning:  #223-D: function "icm42688_pipeline_reset" declared implicitly
-              icm42688_pipeline_reset();
-..\Core\Src\key.c(69): warning:  #1-D: last line of file ends without a newline
-  }
-..\Core\Src\key.c: 2 warnings, 2 errors
-"G431RBT_SUITI\G431RBT_SUITI.axf" - 2 Error(s), 2 Warning(s).
+compiling sd_card.c...
+..\Core\Src\sd_card.c(622): warning:  #550-D: variable "last_used_block"  was set but never used
+      int32_t last_used_block = -1;
+..\Core\Src\sd_card.c: 1 warning, 0 errors
+linking...
+Program Size: Code=19992 RO-data=656 RW-data=72 ZI-data=7144  
+FromELF: creating hex file...
+"G431RBT_SUITI\G431RBT_SUITI.axf" - 0 Error(s), 1 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -61,8 +58,7 @@ Package Vendor: Keil
 
    * Component: ARM::CMSIS:CORE@6.1.0
       Include file:  CMSIS/Core/Include/tz_context.h
-Target not created.
-Build Time Elapsed:  00:00:01
+Build Time Elapsed:  00:00:02
 </pre>
 </body>
 </html>

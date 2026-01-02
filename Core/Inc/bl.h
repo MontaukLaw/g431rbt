@@ -11,4 +11,6 @@ void send_all_save_data(uint16_t data_page_nmb);
 
 extern uint8_t bl_conn_status;
 
+extern uint8_t bl_tx_buf[];
+
 #endif

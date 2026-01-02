@@ -8,6 +8,7 @@ void main_adc_task(void);
 void delay_us(uint32_t nus);
 
 void delay_init(void);
+void delay_ms(uint32_t ms);
 
 extern uint8_t adc_dma_buffer[];
 

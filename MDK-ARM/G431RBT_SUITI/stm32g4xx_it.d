@@ -53,6 +53,7 @@ g431rbt_suiti\stm32g4xx_it.o: ../Core/Inc/app.h
 g431rbt_suiti\stm32g4xx_it.o: ../Core/Inc/led.h
 g431rbt_suiti\stm32g4xx_it.o: ../Core/Inc/switch_hal.h
 g431rbt_suiti\stm32g4xx_it.o: ../Core/Inc/iwdg.h
+g431rbt_suiti\stm32g4xx_it.o: ../Core/Inc/sd_card.h
 g431rbt_suiti\stm32g4xx_it.o: ../Core/Inc/XT25F64F.h
 g431rbt_suiti\stm32g4xx_it.o: ../Core/Inc/flash_app.h
 g431rbt_suiti\stm32g4xx_it.o: ../Core/Inc/flash_spi_interface.h

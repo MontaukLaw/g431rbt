@@ -57,10 +57,7 @@ void key_task(void)
     {
         if (key_down_counter >= RESET_GQ_KEY_SHAKE_DELAY) // 1s
         {
-            // key_down_counter = 0;
             imu_reseted = 1;
-            // 陀螺仪复位
-            icm42688_pipeline_reset();
         }
         key_down_counter = 0;
     }

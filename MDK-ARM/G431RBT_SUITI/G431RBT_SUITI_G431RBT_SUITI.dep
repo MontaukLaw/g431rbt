@@ -1,11 +1,11 @@
 Dependencies for Project 'G431RBT_SUITI', Target 'G431RBT_SUITI': (DO NOT MODIFY !)
 CompilerVersion: 5060422::V5.06 update 4 (build 422)::ARMCC
-F (startup_stm32g431xx.s)(0x69479EE3)(--cpu Cortex-M4.fp.sp -g --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\_G431RBT_SUITI-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include--pd "__UVISION_VERSION SETA 541" --pd "STM32G431xx SETA 1" --pd "_RTE_ SETA 1"--list startup_stm32g431xx.lst --xref -o g431rbt_suiti\startup_stm32g431xx.o --depend g431rbt_suiti\startup_stm32g431xx.d)
+F (startup_stm32g431xx.s)(0x6947A1D4)(--cpu Cortex-M4.fp.sp -g --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\_G431RBT_SUITI-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include--pd "__UVISION_VERSION SETA 541" --pd "STM32G431xx SETA 1" --pd "_RTE_ SETA 1"--list startup_stm32g431xx.lst --xref -o g431rbt_suiti\startup_stm32g431xx.o --depend g431rbt_suiti\startup_stm32g431xx.d)
 F (..\Core\Src\flash_app.c)(0x69479762)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_G431RBT_SUITI-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="541" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o g431rbt_suiti\flash_app.o --omf_browse g431rbt_suiti\flash_app.crf --depend g431rbt_suiti\flash_app.d)
-I (../Core/Inc/user_comm.h)(0x6947A062)
+I (../Core/Inc/user_comm.h)(0x6955F1D4)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (../Core/Inc/main.h)(0x694618A5)
+I (../Core/Inc/main.h)(0x6947A1D3)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x694136C0)
 I (../Core/Inc/stm32g4xx_hal_conf.h)(0x69479EE2)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x694136C0)
@@ -47,24 +47,25 @@ I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (../Core/Inc/usart.h)(0x694136CB)
 I (../Core/Inc/comm.h)(0x69479762)
-I (../Core/Inc/bl.h)(0x69479762)
+I (../Core/Inc/bl.h)(0x6951CFE3)
 I (../Core/Inc/bat_val.h)(0x69461AAE)
 I (../Core/Inc/charge_state.h)(0x68E7B05C)
-I (../Core/Inc/app.h)(0x69479F71)
+I (../Core/Inc/app.h)(0x69533138)
 I (../Core/Inc/led.h)(0x68E7B256)
 I (../Core/Inc/switch_hal.h)(0x68625A22)
 I (../Core/Inc/iwdg.h)(0x69479EE1)
+I (../Core/Inc/sd_card.h)(0x6955FBEF)
 I (../Core/Inc/XT25F64F.h)(0x694607A4)
-I (../Core/Inc/flash_app.h)(0x69479762)
+I (../Core/Inc/flash_app.h)(0x6955F6EA)
 I (../Core/Inc/flash_spi_interface.h)(0x694600DC)
-I (../Core/Inc/soft_crc.h)(0x691ECA80)
+I (../Core/Inc/soft_crc.h)(0x6951D4D0)
 I (../Core/Inc/algorithm.h)(0x69479DE9)
 I (../Core/Inc/key.h)(0x68E8652A)
 F (..\Core\Src\flash_spi_interface.c)(0x69479762)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_G431RBT_SUITI-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="541" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o g431rbt_suiti\flash_spi_interface.o --omf_browse g431rbt_suiti\flash_spi_interface.crf --depend g431rbt_suiti\flash_spi_interface.d)
-I (../Core/Inc/user_comm.h)(0x6947A062)
+I (../Core/Inc/user_comm.h)(0x6955F1D4)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (../Core/Inc/main.h)(0x694618A5)
+I (../Core/Inc/main.h)(0x6947A1D3)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x694136C0)
 I (../Core/Inc/stm32g4xx_hal_conf.h)(0x69479EE2)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x694136C0)
@@ -106,24 +107,25 @@ I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (../Core/Inc/usart.h)(0x694136CB)
 I (../Core/Inc/comm.h)(0x69479762)
-I (../Core/Inc/bl.h)(0x69479762)
+I (../Core/Inc/bl.h)(0x6951CFE3)
 I (../Core/Inc/bat_val.h)(0x69461AAE)
 I (../Core/Inc/charge_state.h)(0x68E7B05C)
-I (../Core/Inc/app.h)(0x69479F71)
+I (../Core/Inc/app.h)(0x69533138)
 I (../Core/Inc/led.h)(0x68E7B256)
 I (../Core/Inc/switch_hal.h)(0x68625A22)
 I (../Core/Inc/iwdg.h)(0x69479EE1)
+I (../Core/Inc/sd_card.h)(0x6955FBEF)
 I (../Core/Inc/XT25F64F.h)(0x694607A4)
-I (../Core/Inc/flash_app.h)(0x69479762)
+I (../Core/Inc/flash_app.h)(0x6955F6EA)
 I (../Core/Inc/flash_spi_interface.h)(0x694600DC)
-I (../Core/Inc/soft_crc.h)(0x691ECA80)
+I (../Core/Inc/soft_crc.h)(0x6951D4D0)
 I (../Core/Inc/algorithm.h)(0x69479DE9)
 I (../Core/Inc/key.h)(0x68E8652A)
 F (..\Core\Src\soft_crc.c)(0x691ECA4F)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_G431RBT_SUITI-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="541" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o g431rbt_suiti\soft_crc.o --omf_browse g431rbt_suiti\soft_crc.crf --depend g431rbt_suiti\soft_crc.d)
-I (../Core/Inc/user_comm.h)(0x6947A062)
+I (../Core/Inc/user_comm.h)(0x6955F1D4)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (../Core/Inc/main.h)(0x694618A5)
+I (../Core/Inc/main.h)(0x6947A1D3)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x694136C0)
 I (../Core/Inc/stm32g4xx_hal_conf.h)(0x69479EE2)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x694136C0)
@@ -165,24 +167,25 @@ I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (../Core/Inc/usart.h)(0x694136CB)
 I (../Core/Inc/comm.h)(0x69479762)
-I (../Core/Inc/bl.h)(0x69479762)
+I (../Core/Inc/bl.h)(0x6951CFE3)
 I (../Core/Inc/bat_val.h)(0x69461AAE)
 I (../Core/Inc/charge_state.h)(0x68E7B05C)
-I (../Core/Inc/app.h)(0x69479F71)
+I (../Core/Inc/app.h)(0x69533138)
 I (../Core/Inc/led.h)(0x68E7B256)
 I (../Core/Inc/switch_hal.h)(0x68625A22)
 I (../Core/Inc/iwdg.h)(0x69479EE1)
+I (../Core/Inc/sd_card.h)(0x6955FBEF)
 I (../Core/Inc/XT25F64F.h)(0x694607A4)
-I (../Core/Inc/flash_app.h)(0x69479762)
+I (../Core/Inc/flash_app.h)(0x6955F6EA)
 I (../Core/Inc/flash_spi_interface.h)(0x694600DC)
-I (../Core/Inc/soft_crc.h)(0x691ECA80)
+I (../Core/Inc/soft_crc.h)(0x6951D4D0)
 I (../Core/Inc/algorithm.h)(0x69479DE9)
 I (../Core/Inc/key.h)(0x68E8652A)
-F (..\Core\Src\bl.c)(0x69479762)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_G431RBT_SUITI-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="541" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o g431rbt_suiti\bl.o --omf_browse g431rbt_suiti\bl.crf --depend g431rbt_suiti\bl.d)
-I (../Core/Inc/user_comm.h)(0x6947A062)
+F (..\Core\Src\bl.c)(0x6951CFD2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_G431RBT_SUITI-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="541" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o g431rbt_suiti\bl.o --omf_browse g431rbt_suiti\bl.crf --depend g431rbt_suiti\bl.d)
+I (../Core/Inc/user_comm.h)(0x6955F1D4)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (../Core/Inc/main.h)(0x694618A5)
+I (../Core/Inc/main.h)(0x6947A1D3)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x694136C0)
 I (../Core/Inc/stm32g4xx_hal_conf.h)(0x69479EE2)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x694136C0)
@@ -224,24 +227,25 @@ I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (../Core/Inc/usart.h)(0x694136CB)
 I (../Core/Inc/comm.h)(0x69479762)
-I (../Core/Inc/bl.h)(0x69479762)
+I (../Core/Inc/bl.h)(0x6951CFE3)
 I (../Core/Inc/bat_val.h)(0x69461AAE)
 I (../Core/Inc/charge_state.h)(0x68E7B05C)
-I (../Core/Inc/app.h)(0x69479F71)
+I (../Core/Inc/app.h)(0x69533138)
 I (../Core/Inc/led.h)(0x68E7B256)
 I (../Core/Inc/switch_hal.h)(0x68625A22)
 I (../Core/Inc/iwdg.h)(0x69479EE1)
+I (../Core/Inc/sd_card.h)(0x6955FBEF)
 I (../Core/Inc/XT25F64F.h)(0x694607A4)
-I (../Core/Inc/flash_app.h)(0x69479762)
+I (../Core/Inc/flash_app.h)(0x6955F6EA)
 I (../Core/Inc/flash_spi_interface.h)(0x694600DC)
-I (../Core/Inc/soft_crc.h)(0x691ECA80)
+I (../Core/Inc/soft_crc.h)(0x6951D4D0)
 I (../Core/Inc/algorithm.h)(0x69479DE9)
 I (../Core/Inc/key.h)(0x68E8652A)
-F (..\Core\Src\comm.c)(0x69479FAC)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_G431RBT_SUITI-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="541" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o g431rbt_suiti\comm.o --omf_browse g431rbt_suiti\comm.crf --depend g431rbt_suiti\comm.d)
-I (../Core/Inc/user_comm.h)(0x6947A062)
+F (..\Core\Src\comm.c)(0x6951CFF3)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_G431RBT_SUITI-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="541" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o g431rbt_suiti\comm.o --omf_browse g431rbt_suiti\comm.crf --depend g431rbt_suiti\comm.d)
+I (../Core/Inc/user_comm.h)(0x6955F1D4)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (../Core/Inc/main.h)(0x694618A5)
+I (../Core/Inc/main.h)(0x6947A1D3)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x694136C0)
 I (../Core/Inc/stm32g4xx_hal_conf.h)(0x69479EE2)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x694136C0)
@@ -283,24 +287,25 @@ I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (../Core/Inc/usart.h)(0x694136CB)
 I (../Core/Inc/comm.h)(0x69479762)
-I (../Core/Inc/bl.h)(0x69479762)
+I (../Core/Inc/bl.h)(0x6951CFE3)
 I (../Core/Inc/bat_val.h)(0x69461AAE)
 I (../Core/Inc/charge_state.h)(0x68E7B05C)
-I (../Core/Inc/app.h)(0x69479F71)
+I (../Core/Inc/app.h)(0x69533138)
 I (../Core/Inc/led.h)(0x68E7B256)
 I (../Core/Inc/switch_hal.h)(0x68625A22)
 I (../Core/Inc/iwdg.h)(0x69479EE1)
+I (../Core/Inc/sd_card.h)(0x6955FBEF)
 I (../Core/Inc/XT25F64F.h)(0x694607A4)
-I (../Core/Inc/flash_app.h)(0x69479762)
+I (../Core/Inc/flash_app.h)(0x6955F6EA)
 I (../Core/Inc/flash_spi_interface.h)(0x694600DC)
-I (../Core/Inc/soft_crc.h)(0x691ECA80)
+I (../Core/Inc/soft_crc.h)(0x6951D4D0)
 I (../Core/Inc/algorithm.h)(0x69479DE9)
 I (../Core/Inc/key.h)(0x68E8652A)
 F (..\Core\Src\led.c)(0x69479D63)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_G431RBT_SUITI-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="541" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o g431rbt_suiti\led.o --omf_browse g431rbt_suiti\led.crf --depend g431rbt_suiti\led.d)
-I (../Core/Inc/user_comm.h)(0x6947A062)
+I (../Core/Inc/user_comm.h)(0x6955F1D4)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (../Core/Inc/main.h)(0x694618A5)
+I (../Core/Inc/main.h)(0x6947A1D3)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x694136C0)
 I (../Core/Inc/stm32g4xx_hal_conf.h)(0x69479EE2)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x694136C0)
@@ -342,24 +347,25 @@ I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (../Core/Inc/usart.h)(0x694136CB)
 I (../Core/Inc/comm.h)(0x69479762)
-I (../Core/Inc/bl.h)(0x69479762)
+I (../Core/Inc/bl.h)(0x6951CFE3)
 I (../Core/Inc/bat_val.h)(0x69461AAE)
 I (../Core/Inc/charge_state.h)(0x68E7B05C)
-I (../Core/Inc/app.h)(0x69479F71)
+I (../Core/Inc/app.h)(0x69533138)
 I (../Core/Inc/led.h)(0x68E7B256)
 I (../Core/Inc/switch_hal.h)(0x68625A22)
 I (../Core/Inc/iwdg.h)(0x69479EE1)
+I (../Core/Inc/sd_card.h)(0x6955FBEF)
 I (../Core/Inc/XT25F64F.h)(0x694607A4)
-I (../Core/Inc/flash_app.h)(0x69479762)
+I (../Core/Inc/flash_app.h)(0x6955F6EA)
 I (../Core/Inc/flash_spi_interface.h)(0x694600DC)
-I (../Core/Inc/soft_crc.h)(0x691ECA80)
+I (../Core/Inc/soft_crc.h)(0x6951D4D0)
 I (../Core/Inc/algorithm.h)(0x69479DE9)
 I (../Core/Inc/key.h)(0x68E8652A)
 F (..\Core\Src\charge_state.c)(0x694619F6)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_G431RBT_SUITI-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="541" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o g431rbt_suiti\charge_state.o --omf_browse g431rbt_suiti\charge_state.crf --depend g431rbt_suiti\charge_state.d)
-I (../Core/Inc/user_comm.h)(0x6947A062)
+I (../Core/Inc/user_comm.h)(0x6955F1D4)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (../Core/Inc/main.h)(0x694618A5)
+I (../Core/Inc/main.h)(0x6947A1D3)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x694136C0)
 I (../Core/Inc/stm32g4xx_hal_conf.h)(0x69479EE2)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x694136C0)
@@ -401,24 +407,25 @@ I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (../Core/Inc/usart.h)(0x694136CB)
 I (../Core/Inc/comm.h)(0x69479762)
-I (../Core/Inc/bl.h)(0x69479762)
+I (../Core/Inc/bl.h)(0x6951CFE3)
 I (../Core/Inc/bat_val.h)(0x69461AAE)
 I (../Core/Inc/charge_state.h)(0x68E7B05C)
-I (../Core/Inc/app.h)(0x69479F71)
+I (../Core/Inc/app.h)(0x69533138)
 I (../Core/Inc/led.h)(0x68E7B256)
 I (../Core/Inc/switch_hal.h)(0x68625A22)
 I (../Core/Inc/iwdg.h)(0x69479EE1)
+I (../Core/Inc/sd_card.h)(0x6955FBEF)
 I (../Core/Inc/XT25F64F.h)(0x694607A4)
-I (../Core/Inc/flash_app.h)(0x69479762)
+I (../Core/Inc/flash_app.h)(0x6955F6EA)
 I (../Core/Inc/flash_spi_interface.h)(0x694600DC)
-I (../Core/Inc/soft_crc.h)(0x691ECA80)
+I (../Core/Inc/soft_crc.h)(0x6951D4D0)
 I (../Core/Inc/algorithm.h)(0x69479DE9)
 I (../Core/Inc/key.h)(0x68E8652A)
 F (..\Core\Src\bat_val.c)(0x69479978)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_G431RBT_SUITI-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="541" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o g431rbt_suiti\bat_val.o --omf_browse g431rbt_suiti\bat_val.crf --depend g431rbt_suiti\bat_val.d)
-I (../Core/Inc/user_comm.h)(0x6947A062)
+I (../Core/Inc/user_comm.h)(0x6955F1D4)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (../Core/Inc/main.h)(0x694618A5)
+I (../Core/Inc/main.h)(0x6947A1D3)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x694136C0)
 I (../Core/Inc/stm32g4xx_hal_conf.h)(0x69479EE2)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x694136C0)
@@ -460,24 +467,25 @@ I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (../Core/Inc/usart.h)(0x694136CB)
 I (../Core/Inc/comm.h)(0x69479762)
-I (../Core/Inc/bl.h)(0x69479762)
+I (../Core/Inc/bl.h)(0x6951CFE3)
 I (../Core/Inc/bat_val.h)(0x69461AAE)
 I (../Core/Inc/charge_state.h)(0x68E7B05C)
-I (../Core/Inc/app.h)(0x69479F71)
+I (../Core/Inc/app.h)(0x69533138)
 I (../Core/Inc/led.h)(0x68E7B256)
 I (../Core/Inc/switch_hal.h)(0x68625A22)
 I (../Core/Inc/iwdg.h)(0x69479EE1)
+I (../Core/Inc/sd_card.h)(0x6955FBEF)
 I (../Core/Inc/XT25F64F.h)(0x694607A4)
-I (../Core/Inc/flash_app.h)(0x69479762)
+I (../Core/Inc/flash_app.h)(0x6955F6EA)
 I (../Core/Inc/flash_spi_interface.h)(0x694600DC)
-I (../Core/Inc/soft_crc.h)(0x691ECA80)
+I (../Core/Inc/soft_crc.h)(0x6951D4D0)
 I (../Core/Inc/algorithm.h)(0x69479DE9)
 I (../Core/Inc/key.h)(0x68E8652A)
-F (..\Core\Src\app.c)(0x69479F45)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_G431RBT_SUITI-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="541" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o g431rbt_suiti\app.o --omf_browse g431rbt_suiti\app.crf --depend g431rbt_suiti\app.d)
-I (../Core/Inc/user_comm.h)(0x6947A062)
+F (..\Core\Src\app.c)(0x6953A537)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_G431RBT_SUITI-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="541" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o g431rbt_suiti\app.o --omf_browse g431rbt_suiti\app.crf --depend g431rbt_suiti\app.d)
+I (../Core/Inc/user_comm.h)(0x6955F1D4)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (../Core/Inc/main.h)(0x694618A5)
+I (../Core/Inc/main.h)(0x6947A1D3)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x694136C0)
 I (../Core/Inc/stm32g4xx_hal_conf.h)(0x69479EE2)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x694136C0)
@@ -519,24 +527,25 @@ I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (../Core/Inc/usart.h)(0x694136CB)
 I (../Core/Inc/comm.h)(0x69479762)
-I (../Core/Inc/bl.h)(0x69479762)
+I (../Core/Inc/bl.h)(0x6951CFE3)
 I (../Core/Inc/bat_val.h)(0x69461AAE)
 I (../Core/Inc/charge_state.h)(0x68E7B05C)
-I (../Core/Inc/app.h)(0x69479F71)
+I (../Core/Inc/app.h)(0x69533138)
 I (../Core/Inc/led.h)(0x68E7B256)
 I (../Core/Inc/switch_hal.h)(0x68625A22)
 I (../Core/Inc/iwdg.h)(0x69479EE1)
+I (../Core/Inc/sd_card.h)(0x6955FBEF)
 I (../Core/Inc/XT25F64F.h)(0x694607A4)
-I (../Core/Inc/flash_app.h)(0x69479762)
+I (../Core/Inc/flash_app.h)(0x6955F6EA)
 I (../Core/Inc/flash_spi_interface.h)(0x694600DC)
-I (../Core/Inc/soft_crc.h)(0x691ECA80)
+I (../Core/Inc/soft_crc.h)(0x6951D4D0)
 I (../Core/Inc/algorithm.h)(0x69479DE9)
 I (../Core/Inc/key.h)(0x68E8652A)
 F (..\Core\Src\switch_hal.c)(0x69479E03)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_G431RBT_SUITI-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="541" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o g431rbt_suiti\switch_hal.o --omf_browse g431rbt_suiti\switch_hal.crf --depend g431rbt_suiti\switch_hal.d)
-I (../Core/Inc/user_comm.h)(0x6947A062)
+I (../Core/Inc/user_comm.h)(0x6955F1D4)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (../Core/Inc/main.h)(0x694618A5)
+I (../Core/Inc/main.h)(0x6947A1D3)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x694136C0)
 I (../Core/Inc/stm32g4xx_hal_conf.h)(0x69479EE2)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x694136C0)
@@ -578,21 +587,82 @@ I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (../Core/Inc/usart.h)(0x694136CB)
 I (../Core/Inc/comm.h)(0x69479762)
-I (../Core/Inc/bl.h)(0x69479762)
+I (../Core/Inc/bl.h)(0x6951CFE3)
 I (../Core/Inc/bat_val.h)(0x69461AAE)
 I (../Core/Inc/charge_state.h)(0x68E7B05C)
-I (../Core/Inc/app.h)(0x69479F71)
+I (../Core/Inc/app.h)(0x69533138)
 I (../Core/Inc/led.h)(0x68E7B256)
 I (../Core/Inc/switch_hal.h)(0x68625A22)
 I (../Core/Inc/iwdg.h)(0x69479EE1)
+I (../Core/Inc/sd_card.h)(0x6955FBEF)
 I (../Core/Inc/XT25F64F.h)(0x694607A4)
-I (../Core/Inc/flash_app.h)(0x69479762)
+I (../Core/Inc/flash_app.h)(0x6955F6EA)
 I (../Core/Inc/flash_spi_interface.h)(0x694600DC)
-I (../Core/Inc/soft_crc.h)(0x691ECA80)
+I (../Core/Inc/soft_crc.h)(0x6951D4D0)
 I (../Core/Inc/algorithm.h)(0x69479DE9)
 I (../Core/Inc/key.h)(0x68E8652A)
-F (../Core/Src/main.c)(0x6947A029)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_G431RBT_SUITI-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="541" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o g431rbt_suiti\main.o --omf_browse g431rbt_suiti\main.crf --depend g431rbt_suiti\main.d)
-I (../Core/Inc/main.h)(0x694618A5)
+F (..\Core\Src\key.c)(0x69539C40)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_G431RBT_SUITI-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="541" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o g431rbt_suiti\key.o --omf_browse g431rbt_suiti\key.crf --depend g431rbt_suiti\key.d)
+I (../Core/Inc/user_comm.h)(0x6955F1D4)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+I (../Core/Inc/main.h)(0x6947A1D3)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x694136C0)
+I (../Core/Inc/stm32g4xx_hal_conf.h)(0x69479EE2)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x694136C0)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x694136C0)
+I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x694136C0)
+I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g431xx.h)(0x694136C0)
+I (../Drivers/CMSIS/Include/core_cm4.h)(0x694136B0)
+I (../Drivers/CMSIS/Include/cmsis_version.h)(0x694136B0)
+I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x694136B0)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x694136B0)
+I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x694136B0)
+I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x694136C0)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x694136C0)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h)(0x694136C0)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h)(0x694136C0)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h)(0x694136C0)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h)(0x694136C0)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h)(0x694136C0)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h)(0x694136C0)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h)(0x694136C0)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h)(0x694136C0)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h)(0x694136C0)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x694136C0)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x694136C0)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x694136C0)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x694136C0)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_iwdg.h)(0x694136C0)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c.h)(0x694136C0)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c_ex.h)(0x694136C0)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x694136C0)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x694136C0)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x694136C0)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h)(0x694136C0)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x694136C0)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x694136C0)
+I (../Core/Inc/spi.h)(0x694136CB)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (../Core/Inc/usart.h)(0x694136CB)
+I (../Core/Inc/comm.h)(0x69479762)
+I (../Core/Inc/bl.h)(0x6951CFE3)
+I (../Core/Inc/bat_val.h)(0x69461AAE)
+I (../Core/Inc/charge_state.h)(0x68E7B05C)
+I (../Core/Inc/app.h)(0x69533138)
+I (../Core/Inc/led.h)(0x68E7B256)
+I (../Core/Inc/switch_hal.h)(0x68625A22)
+I (../Core/Inc/iwdg.h)(0x69479EE1)
+I (../Core/Inc/sd_card.h)(0x6955FBEF)
+I (../Core/Inc/XT25F64F.h)(0x694607A4)
+I (../Core/Inc/flash_app.h)(0x6955F6EA)
+I (../Core/Inc/flash_spi_interface.h)(0x694600DC)
+I (../Core/Inc/soft_crc.h)(0x6951D4D0)
+I (../Core/Inc/algorithm.h)(0x69479DE9)
+I (../Core/Inc/key.h)(0x68E8652A)
+F (../Core/Src/main.c)(0x6955FF79)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_G431RBT_SUITI-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="541" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o g431rbt_suiti\main.o --omf_browse g431rbt_suiti\main.crf --depend g431rbt_suiti\main.d)
+I (../Core/Inc/main.h)(0x6947A1D3)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x694136C0)
 I (../Core/Inc/stm32g4xx_hal_conf.h)(0x69479EE2)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x694136C0)
@@ -637,26 +707,27 @@ I (../Core/Inc/iwdg.h)(0x69479EE1)
 I (../Core/Inc/spi.h)(0x694136CB)
 I (../Core/Inc/usart.h)(0x694136CB)
 I (../Core/Inc/gpio.h)(0x694136C9)
-I (../Core/Inc/user_comm.h)(0x6947A062)
+I (../Core/Inc/user_comm.h)(0x6955F1D4)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (../Core/Inc/comm.h)(0x69479762)
-I (../Core/Inc/bl.h)(0x69479762)
+I (../Core/Inc/bl.h)(0x6951CFE3)
 I (../Core/Inc/bat_val.h)(0x69461AAE)
 I (../Core/Inc/charge_state.h)(0x68E7B05C)
-I (../Core/Inc/app.h)(0x69479F71)
+I (../Core/Inc/app.h)(0x69533138)
 I (../Core/Inc/led.h)(0x68E7B256)
 I (../Core/Inc/switch_hal.h)(0x68625A22)
+I (../Core/Inc/sd_card.h)(0x6955FBEF)
 I (../Core/Inc/XT25F64F.h)(0x694607A4)
-I (../Core/Inc/flash_app.h)(0x69479762)
+I (../Core/Inc/flash_app.h)(0x6955F6EA)
 I (../Core/Inc/flash_spi_interface.h)(0x694600DC)
-I (../Core/Inc/soft_crc.h)(0x691ECA80)
+I (../Core/Inc/soft_crc.h)(0x6951D4D0)
 I (../Core/Inc/algorithm.h)(0x69479DE9)
 I (../Core/Inc/key.h)(0x68E8652A)
-F (../Core/Src/gpio.c)(0x694618A2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_G431RBT_SUITI-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="541" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o g431rbt_suiti\gpio.o --omf_browse g431rbt_suiti\gpio.crf --depend g431rbt_suiti\gpio.d)
+F (../Core/Src/gpio.c)(0x6947A1CD)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_G431RBT_SUITI-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="541" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o g431rbt_suiti\gpio.o --omf_browse g431rbt_suiti\gpio.crf --depend g431rbt_suiti\gpio.d)
 I (../Core/Inc/gpio.h)(0x694136C9)
-I (../Core/Inc/main.h)(0x694618A5)
+I (../Core/Inc/main.h)(0x6947A1D3)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x694136C0)
 I (../Core/Inc/stm32g4xx_hal_conf.h)(0x69479EE2)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x694136C0)
@@ -696,7 +767,7 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x694136C0)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x694136C0)
 F (../Core/Src/adc.c)(0x694136CA)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_G431RBT_SUITI-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="541" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o g431rbt_suiti\adc.o --omf_browse g431rbt_suiti\adc.crf --depend g431rbt_suiti\adc.d)
 I (../Core/Inc/adc.h)(0x694136CA)
-I (../Core/Inc/main.h)(0x694618A5)
+I (../Core/Inc/main.h)(0x6947A1D3)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x694136C0)
 I (../Core/Inc/stm32g4xx_hal_conf.h)(0x69479EE2)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x694136C0)
@@ -736,7 +807,7 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x694136C0)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x694136C0)
 F (../Core/Src/dma.c)(0x69461D8C)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_G431RBT_SUITI-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="541" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o g431rbt_suiti\dma.o --omf_browse g431rbt_suiti\dma.crf --depend g431rbt_suiti\dma.d)
 I (../Core/Inc/dma.h)(0x694136CA)
-I (../Core/Inc/main.h)(0x694618A5)
+I (../Core/Inc/main.h)(0x6947A1D3)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x694136C0)
 I (../Core/Inc/stm32g4xx_hal_conf.h)(0x69479EE2)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x694136C0)
@@ -776,7 +847,7 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x694136C0)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x694136C0)
 F (../Core/Src/i2c.c)(0x694136CB)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_G431RBT_SUITI-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="541" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o g431rbt_suiti\i2c.o --omf_browse g431rbt_suiti\i2c.crf --depend g431rbt_suiti\i2c.d)
 I (../Core/Inc/i2c.h)(0x694136CB)
-I (../Core/Inc/main.h)(0x694618A5)
+I (../Core/Inc/main.h)(0x6947A1D3)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x694136C0)
 I (../Core/Inc/stm32g4xx_hal_conf.h)(0x69479EE2)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x694136C0)
@@ -816,7 +887,7 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x694136C0)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x694136C0)
 F (../Core/Src/iwdg.c)(0x69479EE1)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_G431RBT_SUITI-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="541" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o g431rbt_suiti\iwdg.o --omf_browse g431rbt_suiti\iwdg.crf --depend g431rbt_suiti\iwdg.d)
 I (../Core/Inc/iwdg.h)(0x69479EE1)
-I (../Core/Inc/main.h)(0x694618A5)
+I (../Core/Inc/main.h)(0x6947A1D3)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x694136C0)
 I (../Core/Inc/stm32g4xx_hal_conf.h)(0x69479EE2)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x694136C0)
@@ -854,9 +925,9 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x694136C0)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h)(0x694136C0)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x694136C0)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x694136C0)
-F (../Core/Src/spi.c)(0x6945F04D)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_G431RBT_SUITI-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="541" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o g431rbt_suiti\spi.o --omf_browse g431rbt_suiti\spi.crf --depend g431rbt_suiti\spi.d)
+F (../Core/Src/spi.c)(0x6951C9F2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_G431RBT_SUITI-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="541" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o g431rbt_suiti\spi.o --omf_browse g431rbt_suiti\spi.crf --depend g431rbt_suiti\spi.d)
 I (../Core/Inc/spi.h)(0x694136CB)
-I (../Core/Inc/main.h)(0x694618A5)
+I (../Core/Inc/main.h)(0x6947A1D3)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x694136C0)
 I (../Core/Inc/stm32g4xx_hal_conf.h)(0x69479EE2)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x694136C0)
@@ -896,7 +967,7 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x694136C0)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x694136C0)
 F (../Core/Src/usart.c)(0x69461D8C)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_G431RBT_SUITI-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="541" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o g431rbt_suiti\usart.o --omf_browse g431rbt_suiti\usart.crf --depend g431rbt_suiti\usart.d)
 I (../Core/Inc/usart.h)(0x694136CB)
-I (../Core/Inc/main.h)(0x694618A5)
+I (../Core/Inc/main.h)(0x6947A1D3)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x694136C0)
 I (../Core/Inc/stm32g4xx_hal_conf.h)(0x69479EE2)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x694136C0)
@@ -936,7 +1007,7 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x694136C0)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x694136C0)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 F (../Core/Src/stm32g4xx_it.c)(0x69479EE1)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_G431RBT_SUITI-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="541" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o g431rbt_suiti\stm32g4xx_it.o --omf_browse g431rbt_suiti\stm32g4xx_it.crf --depend g431rbt_suiti\stm32g4xx_it.d)
-I (../Core/Inc/main.h)(0x694618A5)
+I (../Core/Inc/main.h)(0x6947A1D3)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x694136C0)
 I (../Core/Inc/stm32g4xx_hal_conf.h)(0x69479EE2)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x694136C0)
@@ -975,28 +1046,29 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h)(0x694136C0)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x694136C0)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x694136C0)
 I (../Core/Inc/stm32g4xx_it.h)(0x69461D8D)
-I (../Core/Inc/user_comm.h)(0x6947A062)
+I (../Core/Inc/user_comm.h)(0x6955F1D4)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (../Core/Inc/spi.h)(0x694136CB)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (../Core/Inc/usart.h)(0x694136CB)
 I (../Core/Inc/comm.h)(0x69479762)
-I (../Core/Inc/bl.h)(0x69479762)
+I (../Core/Inc/bl.h)(0x6951CFE3)
 I (../Core/Inc/bat_val.h)(0x69461AAE)
 I (../Core/Inc/charge_state.h)(0x68E7B05C)
-I (../Core/Inc/app.h)(0x69479F71)
+I (../Core/Inc/app.h)(0x69533138)
 I (../Core/Inc/led.h)(0x68E7B256)
 I (../Core/Inc/switch_hal.h)(0x68625A22)
 I (../Core/Inc/iwdg.h)(0x69479EE1)
+I (../Core/Inc/sd_card.h)(0x6955FBEF)
 I (../Core/Inc/XT25F64F.h)(0x694607A4)
-I (../Core/Inc/flash_app.h)(0x69479762)
+I (../Core/Inc/flash_app.h)(0x6955F6EA)
 I (../Core/Inc/flash_spi_interface.h)(0x694600DC)
-I (../Core/Inc/soft_crc.h)(0x691ECA80)
+I (../Core/Inc/soft_crc.h)(0x6951D4D0)
 I (../Core/Inc/algorithm.h)(0x69479DE9)
 I (../Core/Inc/key.h)(0x68E8652A)
 F (../Core/Src/stm32g4xx_hal_msp.c)(0x694136CB)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_G431RBT_SUITI-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="541" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o g431rbt_suiti\stm32g4xx_hal_msp.o --omf_browse g431rbt_suiti\stm32g4xx_hal_msp.crf --depend g431rbt_suiti\stm32g4xx_hal_msp.d)
-I (../Core/Inc/main.h)(0x694618A5)
+I (../Core/Inc/main.h)(0x6947A1D3)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x694136C0)
 I (../Core/Inc/stm32g4xx_hal_conf.h)(0x69479EE2)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x694136C0)
@@ -1034,11 +1106,11 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x694136C0)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h)(0x694136C0)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x694136C0)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x694136C0)
-F (..\Core\Src\key.c)(0x6947A042)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_G431RBT_SUITI-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="541" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o g431rbt_suiti\key.o --omf_browse g431rbt_suiti\key.crf --depend g431rbt_suiti\key.d)
-I (../Core/Inc/user_comm.h)(0x6947A062)
+F (..\Core\Src\sd_card.c)(0x695600A0)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_G431RBT_SUITI-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="541" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o g431rbt_suiti\sd_card.o --omf_browse g431rbt_suiti\sd_card.crf --depend g431rbt_suiti\sd_card.d)
+I (../Core/Inc/user_comm.h)(0x6955F1D4)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (../Core/Inc/main.h)(0x694618A5)
+I (../Core/Inc/main.h)(0x6947A1D3)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x694136C0)
 I (../Core/Inc/stm32g4xx_hal_conf.h)(0x69479EE2)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x694136C0)
@@ -1080,17 +1152,78 @@ I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (../Core/Inc/usart.h)(0x694136CB)
 I (../Core/Inc/comm.h)(0x69479762)
-I (../Core/Inc/bl.h)(0x69479762)
+I (../Core/Inc/bl.h)(0x6951CFE3)
 I (../Core/Inc/bat_val.h)(0x69461AAE)
 I (../Core/Inc/charge_state.h)(0x68E7B05C)
-I (../Core/Inc/app.h)(0x69479F71)
+I (../Core/Inc/app.h)(0x69533138)
 I (../Core/Inc/led.h)(0x68E7B256)
 I (../Core/Inc/switch_hal.h)(0x68625A22)
 I (../Core/Inc/iwdg.h)(0x69479EE1)
+I (../Core/Inc/sd_card.h)(0x6955FBEF)
 I (../Core/Inc/XT25F64F.h)(0x694607A4)
-I (../Core/Inc/flash_app.h)(0x69479762)
+I (../Core/Inc/flash_app.h)(0x6955F6EA)
 I (../Core/Inc/flash_spi_interface.h)(0x694600DC)
-I (../Core/Inc/soft_crc.h)(0x691ECA80)
+I (../Core/Inc/soft_crc.h)(0x6951D4D0)
+I (../Core/Inc/algorithm.h)(0x69479DE9)
+I (../Core/Inc/key.h)(0x68E8652A)
+F (..\Core\Src\algorithm.c)(0x6953AA61)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_G431RBT_SUITI-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="541" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o g431rbt_suiti\algorithm.o --omf_browse g431rbt_suiti\algorithm.crf --depend g431rbt_suiti\algorithm.d)
+I (../Core/Inc/user_comm.h)(0x6955F1D4)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+I (../Core/Inc/main.h)(0x6947A1D3)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x694136C0)
+I (../Core/Inc/stm32g4xx_hal_conf.h)(0x69479EE2)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x694136C0)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x694136C0)
+I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x694136C0)
+I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g431xx.h)(0x694136C0)
+I (../Drivers/CMSIS/Include/core_cm4.h)(0x694136B0)
+I (../Drivers/CMSIS/Include/cmsis_version.h)(0x694136B0)
+I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x694136B0)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x694136B0)
+I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x694136B0)
+I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x694136C0)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x694136C0)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h)(0x694136C0)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h)(0x694136C0)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h)(0x694136C0)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h)(0x694136C0)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h)(0x694136C0)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h)(0x694136C0)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h)(0x694136C0)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h)(0x694136C0)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h)(0x694136C0)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x694136C0)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x694136C0)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x694136C0)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x694136C0)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_iwdg.h)(0x694136C0)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c.h)(0x694136C0)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c_ex.h)(0x694136C0)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x694136C0)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x694136C0)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x694136C0)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h)(0x694136C0)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x694136C0)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x694136C0)
+I (../Core/Inc/spi.h)(0x694136CB)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (../Core/Inc/usart.h)(0x694136CB)
+I (../Core/Inc/comm.h)(0x69479762)
+I (../Core/Inc/bl.h)(0x6951CFE3)
+I (../Core/Inc/bat_val.h)(0x69461AAE)
+I (../Core/Inc/charge_state.h)(0x68E7B05C)
+I (../Core/Inc/app.h)(0x69533138)
+I (../Core/Inc/led.h)(0x68E7B256)
+I (../Core/Inc/switch_hal.h)(0x68625A22)
+I (../Core/Inc/iwdg.h)(0x69479EE1)
+I (../Core/Inc/sd_card.h)(0x6955FBEF)
+I (../Core/Inc/XT25F64F.h)(0x694607A4)
+I (../Core/Inc/flash_app.h)(0x6955F6EA)
+I (../Core/Inc/flash_spi_interface.h)(0x694600DC)
+I (../Core/Inc/soft_crc.h)(0x6951D4D0)
 I (../Core/Inc/algorithm.h)(0x69479DE9)
 I (../Core/Inc/key.h)(0x68E8652A)
 F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc.c)(0x694136C0)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_G431RBT_SUITI-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="541" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o g431rbt_suiti\stm32g4xx_hal_adc.o --omf_browse g431rbt_suiti\stm32g4xx_hal_adc.crf --depend g431rbt_suiti\stm32g4xx_hal_adc.d)

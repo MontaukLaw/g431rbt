@@ -17,11 +17,8 @@
 #include "led.h"
 #include "switch_hal.h"
 #include "iwdg.h"
-
-#define COL_NUM 8
-#define ROW_NUM 14
-#define TOTAL_POINT_NUM (COL_NUM * ROW_NUM)
-#define MEMS_FLOAT_BYTES 24
+#include "sd_card.h"
+#include <stdint.h>
 
 #include "XT25F64F.h"
 #include "flash_app.h"

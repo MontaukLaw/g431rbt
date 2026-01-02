@@ -6,6 +6,8 @@
 // 中间缓存用
 static int32_t g_lineSum[HEIGHT_MAX > WIDTH_MAX ? HEIGHT_MAX : WIDTH_MAX];
 
+#include <stdint.h>
+
 // 0=row, 1=col
 void press256(const uint8_t *in, uint8_t *out, int width, int height, int value, int type)
 {
@@ -95,3 +97,4 @@ void press256(const uint8_t *in, uint8_t *out, int width, int height, int value,
         }
     }
 }
+

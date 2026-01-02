@@ -4,7 +4,7 @@ uint8_t uart1_rx_buf[STANDARD_PROTOCAL_LEN];
 uint8_t uart2_rx_buf[STANDARD_PROTOCAL_LEN];
 static uint8_t got_rx = 0;
 uint8_t got_rx_u2 = 0;
-uint8_t bl_tx_buf[STANDARD_PROTOCAL_LEN];
+// uint8_t bl_tx_buf[STANDARD_PROTOCAL_LEN];
 
 // protocal
 // 帧头4字节 0xaa 0x55 0x03 0x99
